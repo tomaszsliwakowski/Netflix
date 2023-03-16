@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import { Header } from "../components";
 import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";

@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function Browse() {
-  return <p>Hello form the browse</p>;
+export default function Signup() {
+  return <p>Hello form the Signup</p>;
 }
