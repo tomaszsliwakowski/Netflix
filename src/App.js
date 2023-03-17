@@ -3,11 +3,19 @@ import * as ROUTES from "./constants/routes";
 import { BrowserRouter } from "react-router-dom";
 import { Home, Browse, Signin, Signup } from "./pages";
 import { IsUserRedirect, ProtectedRoute } from "./helpers/routes";
+import { useAuthListener } from "./hooks";
 
 function App() {
-  const user = false;
+  const user = useAuthListener();
   return (
     <BrowserRouter>
+      <IsUserRedirect
+        user={user}
+        loggedInPath={ROUTES.BROWSE}
+        path={ROUTES.HOME}
+      >
+        <Home />
+      </IsUserRedirect>
       <IsUserRedirect
         user={user}
         loggedInPath={ROUTES.BROWSE}
@@ -25,13 +33,6 @@ function App() {
       <ProtectedRoute user={user} path={ROUTES.BROWSE}>
         <Browse />
       </ProtectedRoute>
-      <IsUserRedirect
-        user={user}
-        loggedInPath={ROUTES.BROWSE}
-        path={ROUTES.HOME}
-      >
-        <Home />
-      </IsUserRedirect>
     </BrowserRouter>
   );
 }
