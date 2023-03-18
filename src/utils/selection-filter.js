@@ -27,23 +27,23 @@ export default function selectionFilter({ series, films }) {
     films: [
       {
         title: "Drama",
-        data: films.filter((item) => item.genre === "drama").splice(0, 5),
+        data: films.filter((item) => item.genre === "drama").splice(0, 6),
       },
       {
         title: "Thriller",
-        data: films.filter((item) => item.genre === "thriller").splice(0, 5),
+        data: films.filter((item) => item.genre === "thriller").splice(0, 6),
       },
       {
         title: "Children",
-        data: films.filter((item) => item.genre === "children").splice(0, 5),
+        data: films.filter((item) => item.genre === "children").splice(0, 6),
       },
       {
         title: "Suspense",
-        data: films.filter((item) => item.genre === "suspense").splice(0, 5),
+        data: films.filter((item) => item.genre === "suspense").splice(0, 6),
       },
       {
         title: "Romance",
-        data: films.filter((item) => item.genre === "romance").splice(0, 5),
+        data: films.filter((item) => item.genre === "romance").splice(0, 6),
       },
     ],
   };
