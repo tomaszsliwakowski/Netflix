@@ -58,7 +58,7 @@ Header.Search = function HeaderSearch({
         onClick={() => setSearchActive((prev) => !prev)}
         data-testid="search-click"
       >
-        <img src="/images/icons/search.png" alt="Search" />
+        <img src="./images/icons/search.png" alt="Search" />
       </SearchIcon>
       <SearchInput
         value={searchTerm}
@@ -80,7 +80,7 @@ Header.Feature = function HeaderFeature({ children, ...restProps }) {
 };
 
 Header.Picture = function HeaderPicture({ src, ...restProps }) {
-  return <Picture {...restProps} src={`/images/users/${src}.png`} />;
+  return <Picture {...restProps} src={`./images/users/${src}.png`} />;
 };
 
 Header.Dropdown = function HeaderDropdown({ children, ...restProps }) {
