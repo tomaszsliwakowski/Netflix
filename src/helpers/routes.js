@@ -22,8 +22,8 @@ export function ProtectedRoute({ user, children, ...rest }) {
   const location = useLocation();
 
   useEffect(() => {
-    if (!user && location.pathname === "/browse") {
-      Navigate("signin", { state: { from: location.pathname } });
+    if (!user && location.pathname === "/Netflix/browse") {
+      Navigate("/Netflix/signin", { state: { from: location.pathname } });
     }
   }, []);
 
